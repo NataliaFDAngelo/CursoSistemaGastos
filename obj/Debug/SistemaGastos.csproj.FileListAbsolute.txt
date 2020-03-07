@@ -1,0 +1,11 @@
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\bin\Debug\SistemaGastos.exe.config
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\bin\Debug\SistemaGastos.exe
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\bin\Debug\SistemaGastos.pdb
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.csprojAssemblyReference.cache
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.Principal.resources
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.Properties.Resources.resources
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.View.frmCadAno.resources
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.View.frmCadLanc.resources
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.csproj.GenerateResource.cache
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.exe
+C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\obj\Debug\SistemaGastos.pdb
