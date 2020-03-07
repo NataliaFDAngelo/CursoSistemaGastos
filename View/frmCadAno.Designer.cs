@@ -40,6 +40,7 @@ namespace SistemaGastos.View
             this.btnEditar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,10 +66,13 @@ namespace SistemaGastos.View
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg.Location = new System.Drawing.Point(39, 136);
             this.dg.Name = "dg";
+            this.dg.ReadOnly = true;
             this.dg.RowHeadersWidth = 51;
             this.dg.RowTemplate.Height = 24;
+            this.dg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg.Size = new System.Drawing.Size(211, 202);
             this.dg.TabIndex = 2;
+            this.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellClick);
             // 
             // btnNovo
             // 
@@ -99,6 +103,7 @@ namespace SistemaGastos.View
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -108,14 +113,15 @@ namespace SistemaGastos.View
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Enabled = false;
             this.txtBuscar.Location = new System.Drawing.Point(101, 34);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(149, 22);
             this.txtBuscar.TabIndex = 8;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label2
             // 
@@ -126,11 +132,21 @@ namespace SistemaGastos.View
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar:";
             // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(359, 90);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(52, 22);
+            this.txtId.TabIndex = 9;
+            this.txtId.Visible = false;
+            // 
             // frmCadAno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 377);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEditar);
@@ -163,5 +179,6 @@ namespace SistemaGastos.View
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
