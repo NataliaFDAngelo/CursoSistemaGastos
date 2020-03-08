@@ -34,8 +34,8 @@
             this.btnCadAno = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCadLanc = new System.Windows.Forms.ToolStripMenuItem();
             this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnRelAnual = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRelMensal = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRelAnual = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.dt = new System.Windows.Forms.DateTimePicker();
@@ -85,6 +85,7 @@
             this.btnCadLanc.Name = "btnCadLanc";
             this.btnCadLanc.Size = new System.Drawing.Size(224, 26);
             this.btnCadLanc.Text = "Lancamento";
+            this.btnCadLanc.Click += new System.EventHandler(this.btnCadLanc_Click);
             // 
             // relatorioToolStripMenuItem
             // 
@@ -96,17 +97,17 @@
             this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.relatorioToolStripMenuItem.Text = "Relatorio";
             // 
-            // btnRelAnual
-            // 
-            this.btnRelAnual.Name = "btnRelAnual";
-            this.btnRelAnual.Size = new System.Drawing.Size(224, 26);
-            this.btnRelAnual.Text = "Anual";
-            // 
             // btnRelMensal
             // 
             this.btnRelMensal.Name = "btnRelMensal";
-            this.btnRelMensal.Size = new System.Drawing.Size(224, 26);
+            this.btnRelMensal.Size = new System.Drawing.Size(139, 26);
             this.btnRelMensal.Text = "Mensal";
+            // 
+            // btnRelAnual
+            // 
+            this.btnRelAnual.Name = "btnRelAnual";
+            this.btnRelAnual.Size = new System.Drawing.Size(139, 26);
+            this.btnRelAnual.Text = "Anual";
             // 
             // btnSair
             // 

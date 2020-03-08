@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AnoController.cs" />
+    <Compile Include="Controllers\LancController.cs" />
     <Compile Include="Entidades\Anos.cs" />
     <Compile Include="Entidades\Lancamentos.cs" />
     <Compile Include="Models\AnoModel.cs" />
+    <Compile Include="Models\LancModel.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

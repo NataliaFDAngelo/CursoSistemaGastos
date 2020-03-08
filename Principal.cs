@@ -16,11 +16,18 @@ namespace SistemaGastos
         public Principal()
         {
             InitializeComponent();
+            dt.Value = DateTime.Now;
         }
 
         private void btnCadAno_Click(object sender, EventArgs e)
         {
             frmCadAno frm = new frmCadAno();
+            frm.ShowDialog();
+        }
+
+        private void btnCadLanc_Click(object sender, EventArgs e)
+        {
+            frmCadLanc frm = new frmCadLanc();
             frm.ShowDialog();
         }
     }

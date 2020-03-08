@@ -44,14 +44,19 @@
             this.cbTipo = new System.Windows.Forms.ComboBox();
             this.cbMes = new System.Windows.Forms.ComboBox();
             this.cbAno = new System.Windows.Forms.ComboBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.dtBuscar = new System.Windows.Forms.DateTimePicker();
+            this.dt = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.rbBuscarData = new System.Windows.Forms.RadioButton();
+            this.rbBuscarTipo = new System.Windows.Forms.RadioButton();
+            this.cbBuscarTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(268, 509);
+            this.btnEditar.Location = new System.Drawing.Point(268, 525);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(124, 37);
             this.btnEditar.TabIndex = 13;
@@ -60,7 +65,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(565, 509);
+            this.btnExcluir.Location = new System.Drawing.Point(565, 525);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(124, 37);
             this.btnExcluir.TabIndex = 12;
@@ -69,7 +74,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(418, 509);
+            this.btnSalvar.Location = new System.Drawing.Point(418, 525);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(124, 37);
             this.btnSalvar.TabIndex = 11;
@@ -78,7 +83,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(120, 509);
+            this.btnNovo.Location = new System.Drawing.Point(120, 525);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(124, 37);
             this.btnNovo.TabIndex = 10;
@@ -88,7 +93,7 @@
             // dg
             // 
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg.Location = new System.Drawing.Point(48, 206);
+            this.dg.Location = new System.Drawing.Point(48, 222);
             this.dg.Name = "dg";
             this.dg.RowHeadersWidth = 51;
             this.dg.RowTemplate.Height = 24;
@@ -97,7 +102,7 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(132, 154);
+            this.txtDescricao.Location = new System.Drawing.Point(132, 145);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(382, 22);
             this.txtDescricao.TabIndex = 8;
@@ -105,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 157);
+            this.label1.Location = new System.Drawing.Point(45, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 7;
@@ -113,7 +118,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(613, 154);
+            this.txtValor.Location = new System.Drawing.Point(613, 145);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(175, 22);
             this.txtValor.TabIndex = 15;
@@ -121,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(562, 157);
+            this.label2.Location = new System.Drawing.Point(562, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 14;
@@ -194,14 +199,6 @@
             this.cbAno.Size = new System.Drawing.Size(150, 24);
             this.cbAno.TabIndex = 21;
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Enabled = false;
-            this.txtBuscar.Location = new System.Drawing.Point(639, 30);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(149, 22);
-            this.txtBuscar.TabIndex = 23;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -211,12 +208,80 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Buscar:";
             // 
+            // dtBuscar
+            // 
+            this.dtBuscar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtBuscar.Location = new System.Drawing.Point(638, 33);
+            this.dtBuscar.Name = "dtBuscar";
+            this.dtBuscar.Size = new System.Drawing.Size(150, 22);
+            this.dtBuscar.TabIndex = 23;
+            this.dtBuscar.Value = new System.DateTime(2020, 3, 5, 0, 0, 0, 0);
+            // 
+            // dt
+            // 
+            this.dt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt.Location = new System.Drawing.Point(109, 186);
+            this.dt.Name = "dt";
+            this.dt.Size = new System.Drawing.Size(150, 22);
+            this.dt.TabIndex = 25;
+            this.dt.Value = new System.DateTime(2020, 3, 5, 0, 0, 0, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(45, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 17);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Data:";
+            // 
+            // rbBuscarData
+            // 
+            this.rbBuscarData.AutoSize = true;
+            this.rbBuscarData.Location = new System.Drawing.Point(193, 31);
+            this.rbBuscarData.Name = "rbBuscarData";
+            this.rbBuscarData.Size = new System.Drawing.Size(132, 21);
+            this.rbBuscarData.TabIndex = 26;
+            this.rbBuscarData.TabStop = true;
+            this.rbBuscarData.Text = "Buscar por Data";
+            this.rbBuscarData.UseVisualStyleBackColor = true;
+            this.rbBuscarData.CheckedChanged += new System.EventHandler(this.rbBuscarData_CheckedChanged);
+            // 
+            // rbBuscarTipo
+            // 
+            this.rbBuscarTipo.AutoSize = true;
+            this.rbBuscarTipo.Location = new System.Drawing.Point(366, 31);
+            this.rbBuscarTipo.Name = "rbBuscarTipo";
+            this.rbBuscarTipo.Size = new System.Drawing.Size(130, 21);
+            this.rbBuscarTipo.TabIndex = 27;
+            this.rbBuscarTipo.TabStop = true;
+            this.rbBuscarTipo.Text = "Buscar por Tipo";
+            this.rbBuscarTipo.UseVisualStyleBackColor = true;
+            this.rbBuscarTipo.CheckedChanged += new System.EventHandler(this.rbBuscarTipo_CheckedChanged);
+            // 
+            // cbBuscarTipo
+            // 
+            this.cbBuscarTipo.FormattingEnabled = true;
+            this.cbBuscarTipo.Items.AddRange(new object[] {
+            "Entrada",
+            "Saida"});
+            this.cbBuscarTipo.Location = new System.Drawing.Point(638, 31);
+            this.cbBuscarTipo.Name = "cbBuscarTipo";
+            this.cbBuscarTipo.Size = new System.Drawing.Size(150, 24);
+            this.cbBuscarTipo.TabIndex = 28;
+            this.cbBuscarTipo.Visible = false;
+            // 
             // frmCadLanc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 604);
-            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.cbBuscarTipo);
+            this.Controls.Add(this.rbBuscarTipo);
+            this.Controls.Add(this.rbBuscarData);
+            this.Controls.Add(this.dt);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dtBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbAno);
             this.Controls.Add(this.cbMes);
@@ -235,6 +300,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadLanc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lançamentos";
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);
@@ -259,7 +325,12 @@
         private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.ComboBox cbMes;
         private System.Windows.Forms.ComboBox cbAno;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtBuscar;
+        private System.Windows.Forms.DateTimePicker dt;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RadioButton rbBuscarData;
+        private System.Windows.Forms.RadioButton rbBuscarTipo;
+        private System.Windows.Forms.ComboBox cbBuscarTipo;
     }
 }
