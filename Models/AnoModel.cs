@@ -15,18 +15,6 @@ namespace SistemaGastos.Models
             return new AnoController().Inserir(obj);
         }
 
-        public static int Editar(Anos obj)
-        {
-            return new AnoController().Editar(obj);
-        }
-
-
-        public static int Deletar(Anos obj)
-        {
-            return new AnoController().Deletar(obj);
-        }
-
-
         public List<Anos> Buscar(Anos obj)
         {
             return new AnoController().Buscar(obj);
@@ -36,7 +24,5 @@ namespace SistemaGastos.Models
         {
             return new AnoController().Listar();
         }
-
-
     }
 }

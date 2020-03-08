@@ -44,8 +44,8 @@
             this.cbTipo = new System.Windows.Forms.ComboBox();
             this.cbMes = new System.Windows.Forms.ComboBox();
             this.cbAno = new System.Windows.Forms.ComboBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,6 +194,14 @@
             this.cbAno.Size = new System.Drawing.Size(150, 24);
             this.cbAno.TabIndex = 21;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Enabled = false;
+            this.txtBuscar.Location = new System.Drawing.Point(639, 30);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(149, 22);
+            this.txtBuscar.TabIndex = 23;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -203,21 +211,12 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Buscar:";
             // 
-            // dt
-            // 
-            this.dt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt.Location = new System.Drawing.Point(642, 28);
-            this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(146, 22);
-            this.dt.TabIndex = 23;
-            this.dt.Value = new System.DateTime(2020, 3, 5, 0, 0, 0, 0);
-            // 
             // frmCadLanc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 604);
-            this.Controls.Add(this.dt);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbAno);
             this.Controls.Add(this.cbMes);
@@ -260,7 +259,7 @@
         private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.ComboBox cbMes;
         private System.Windows.Forms.ComboBox cbAno;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dt;
     }
 }
