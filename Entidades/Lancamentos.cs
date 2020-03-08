@@ -14,6 +14,7 @@ namespace SistemaGastos.Entidades
         decimal valor;
         string mes;
         int ano;
+        DateTime data;
 
         public int Id_lancamentos { get => id_lancamentos; set => id_lancamentos = value; }
         public string Tipo { get => tipo; set => tipo = value; }
@@ -21,5 +22,6 @@ namespace SistemaGastos.Entidades
         public decimal Valor { get => valor; set => valor = value; }
         public string Mes { get => mes; set => mes = value; }
         public int Ano { get => ano; set => ano = value; }
+        public DateTime Data { get => data; set => data = value; }
     }
 }

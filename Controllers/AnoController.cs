@@ -90,5 +90,40 @@ namespace SistemaGastos.Controllers
                 return lista;
             }
         }
+
+        public int Editar(Anos obj)
+        {
+            using (SqlConnection con = new SqlConnection())
+            {
+                con.ConnectionString = Properties.Settings.Default.Configuração;
+                SqlCommand cn = new SqlCommand();
+                cn.CommandType = CommandType.Text;
+                con.Open();
+                cn.CommandText = "UPDATE ano SET ano = @ano WHERE id_ano = @id";
+                cn.Parameters.Add("ano", SqlDbType.Int).Value = obj.Ano;
+                cn.Parameters.Add("id", SqlDbType.Int).Value = obj.Id_ano;
+                cn.Connection = con;
+
+                int qtd = cn.ExecuteNonQuery();
+                return qtd;
+            }
+        }
+
+        public int Deletar(Anos obj)
+        {
+            using (SqlConnection con = new SqlConnection())
+            {
+                con.ConnectionString = Properties.Settings.Default.Configuração;
+                SqlCommand cn = new SqlCommand();
+                cn.CommandType = CommandType.Text;
+                con.Open();
+                cn.CommandText = "DELETE FROM ano WHERE id_ano = @id";
+                cn.Parameters.Add("id", SqlDbType.Int).Value = obj.Id_ano;
+                cn.Connection = con;
+
+                int qtd = cn.ExecuteNonQuery();
+                return qtd;
+            }
+        }
     }
 }
