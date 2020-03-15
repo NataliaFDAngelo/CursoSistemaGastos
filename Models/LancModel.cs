@@ -34,9 +34,20 @@ namespace SistemaGastos.Models
             return new LancController().BuscarTipo(obj);
         }
 
+        public List<Lancamentos> BuscarDataTipoEntrada(Lancamentos obj)
+        {
+            return new LancController().BuscarDataTipoEntrada(obj);
+        }
+
+        public List<Lancamentos> BuscarDataTipoSaida(Lancamentos obj)
+        {
+            return new LancController().BuscarDataTipoSaida(obj);
+        }
         public List<Lancamentos> Listar()
         {
             return new LancController().Listar();
-        } 
+        }
+
+        
     }
 }

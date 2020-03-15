@@ -44,7 +44,11 @@
             this.dgEntradas = new System.Windows.Forms.DataGridView();
             this.dgSaidas = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotalGeral = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblTotalEntradas = new System.Windows.Forms.Label();
+            this.lblTotalSaidas = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgEntradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgSaidas)).BeginInit();
@@ -76,14 +80,14 @@
             // btnCadAno
             // 
             this.btnCadAno.Name = "btnCadAno";
-            this.btnCadAno.Size = new System.Drawing.Size(224, 26);
+            this.btnCadAno.Size = new System.Drawing.Size(173, 26);
             this.btnCadAno.Text = "Ano";
             this.btnCadAno.Click += new System.EventHandler(this.btnCadAno_Click);
             // 
             // btnCadLanc
             // 
             this.btnCadLanc.Name = "btnCadLanc";
-            this.btnCadLanc.Size = new System.Drawing.Size(224, 26);
+            this.btnCadLanc.Size = new System.Drawing.Size(173, 26);
             this.btnCadLanc.Text = "Lancamento";
             this.btnCadLanc.Click += new System.EventHandler(this.btnCadLanc_Click);
             // 
@@ -115,6 +119,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(68, 24);
             this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // label1
             // 
@@ -135,6 +140,8 @@
             this.dt.Size = new System.Drawing.Size(146, 22);
             this.dt.TabIndex = 2;
             this.dt.Value = new System.DateTime(2020, 3, 5, 0, 0, 0, 0);
+            this.dt.ValueChanged += new System.EventHandler(this.dt_ValueChanged);
+            this.dt.Enter += new System.EventHandler(this.dt_Enter);
             // 
             // label2
             // 
@@ -184,30 +191,80 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(564, 482);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(564, 508);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 18);
+            this.label4.Size = new System.Drawing.Size(121, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Saldo Total:";
             // 
-            // label5
+            // lblTotalGeral
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(695, 482);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "0";
+            this.lblTotalGeral.AutoSize = true;
+            this.lblTotalGeral.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTotalGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalGeral.Location = new System.Drawing.Point(695, 508);
+            this.lblTotalGeral.Name = "lblTotalGeral";
+            this.lblTotalGeral.Size = new System.Drawing.Size(21, 24);
+            this.lblTotalGeral.TabIndex = 8;
+            this.lblTotalGeral.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 465);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Total das Entradas:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(395, 465);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 18);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Total das Saídas:";
+            // 
+            // lblTotalEntradas
+            // 
+            this.lblTotalEntradas.AutoSize = true;
+            this.lblTotalEntradas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTotalEntradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalEntradas.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblTotalEntradas.Location = new System.Drawing.Point(163, 465);
+            this.lblTotalEntradas.Name = "lblTotalEntradas";
+            this.lblTotalEntradas.Size = new System.Drawing.Size(17, 18);
+            this.lblTotalEntradas.TabIndex = 11;
+            this.lblTotalEntradas.Text = "0";
+            // 
+            // lblTotalSaidas
+            // 
+            this.lblTotalSaidas.AutoSize = true;
+            this.lblTotalSaidas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTotalSaidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSaidas.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalSaidas.Location = new System.Drawing.Point(535, 465);
+            this.lblTotalSaidas.Name = "lblTotalSaidas";
+            this.lblTotalSaidas.Size = new System.Drawing.Size(17, 18);
+            this.lblTotalSaidas.TabIndex = 12;
+            this.lblTotalSaidas.Text = "0";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 523);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(800, 544);
+            this.Controls.Add(this.lblTotalSaidas);
+            this.Controls.Add(this.lblTotalEntradas);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTotalGeral);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgSaidas);
             this.Controls.Add(this.dgEntradas);
@@ -223,6 +280,8 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de Gastos";
+            this.Activated += new System.EventHandler(this.Principal_Activated);
+            this.Click += new System.EventHandler(this.Principal_Click);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgEntradas)).EndInit();
@@ -249,7 +308,11 @@
         private System.Windows.Forms.DataGridView dgEntradas;
         private System.Windows.Forms.DataGridView dgSaidas;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTotalGeral;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTotalEntradas;
+        private System.Windows.Forms.Label lblTotalSaidas;
     }
 }
 
