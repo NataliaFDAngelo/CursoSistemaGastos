@@ -104,13 +104,14 @@
             // btnRelMensal
             // 
             this.btnRelMensal.Name = "btnRelMensal";
-            this.btnRelMensal.Size = new System.Drawing.Size(139, 26);
+            this.btnRelMensal.Size = new System.Drawing.Size(224, 26);
             this.btnRelMensal.Text = "Mensal";
+            this.btnRelMensal.Click += new System.EventHandler(this.btnRelMensal_Click);
             // 
             // btnRelAnual
             // 
             this.btnRelAnual.Name = "btnRelAnual";
-            this.btnRelAnual.Size = new System.Drawing.Size(139, 26);
+            this.btnRelAnual.Size = new System.Drawing.Size(224, 26);
             this.btnRelAnual.Text = "Anual";
             // 
             // btnSair

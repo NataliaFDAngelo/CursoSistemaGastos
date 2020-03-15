@@ -1,5 +1,6 @@
 ﻿using SistemaGastos.Entidades;
 using SistemaGastos.Models;
+using SistemaGastos.Report;
 using SistemaGastos.View;
 using System;
 using System.Collections.Generic;
@@ -156,6 +157,12 @@ namespace SistemaGastos
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnRelMensal_Click(object sender, EventArgs e)
+        {
+            frmRelMensal frm = new frmRelMensal();
+            frm.ShowDialog();
         }
     }
 }
