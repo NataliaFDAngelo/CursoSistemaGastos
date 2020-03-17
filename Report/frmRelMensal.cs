@@ -19,8 +19,12 @@ namespace SistemaGastos.Report
 
         private void frmRelMensal_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'gastosLeoDataSet.saidaValor'. Você pode movê-la ou removê-la conforme necessário.
+            this.saidaValorTableAdapter.Fill(this.gastosLeoDataSet.saidaValor);
+            // TODO: esta linha de código carrega dados na tabela 'gastosLeoDataSet1.entradaValor'. Você pode movê-la ou removê-la conforme necessário.
+            this.entradaValorTableAdapter.Fill(this.gastosLeoDataSet1.entradaValor);
             // TODO: esta linha de código carrega dados na tabela 'gastosLeoDataSet.lancamento_ano'. Você pode movê-la ou removê-la conforme necessário.
-           
+
         }
 
         private void cbMes_SelectionChangeCommitted(object sender, EventArgs e)

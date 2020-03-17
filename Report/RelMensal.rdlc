@@ -355,7 +355,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.686cm</Top>
+        <Top>1.3685cm</Top>
         <Left>0.7057cm</Left>
         <Height>1.2cm</Height>
         <Width>14.9515cm</Width>
@@ -438,17 +438,21 @@
             <TextRuns>
               <TextRun>
                 <Value>Total de Entradas:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>4.30361cm</Top>
-        <Left>0.7057cm</Left>
+        <Top>3.13239cm</Top>
+        <Left>9.28676cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.30433cm</Width>
+        <Width>3.47367cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -467,16 +471,22 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
-                <Style />
+                <Value>=Sum(Fields!valor.Value, "DataSet2")</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>#,0.00;(#,0.00)</Format>
+                  <Color>DarkBlue</Color>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>4.30361cm</Top>
-        <Left>4.18642cm</Left>
+        <Top>3.13239cm</Top>
+        <Left>13.14142cm</Left>
         <Height>0.58589cm</Height>
         <Width>2.54cm</Width>
         <ZIndex>6</ZIndex>
@@ -490,8 +500,149 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total de Saídas:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>4.05667cm</Top>
+        <Left>9.58309cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.17733cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!valor.Value, "DataSet3")</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>#,0.00;(#,0.00)</Format>
+                  <Color>Red</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>4.05667cm</Top>
+        <Left>13.13048cm</Left>
+        <Height>0.58589cm</Height>
+        <Width>2.54cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total do Mês:</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>5.00578cm</Top>
+        <Left>9.58309cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.17733cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!valor.Value, "DataSet2") - Sum(Fields!valor.Value, "DataSet3")</Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>#,0.00;(#,0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>5.00578cm</Top>
+        <Left>13.13048cm</Left>
+        <Height>0.58589cm</Height>
+        <Width>2.54cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.65in</Height>
     <Style />
   </Body>
   <Width>6.4985in</Width>
@@ -574,7 +725,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.71967cm</Height>
+      <Height>2.18017cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -682,6 +833,50 @@
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>GastosLeoDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id_lancamento">
+          <DataField>id_lancamento</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="tipo">
+          <DataField>tipo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="descricao">
+          <DataField>descricao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="valor">
+          <DataField>valor</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="mes">
+          <DataField>mes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="id_ano">
+          <DataField>id_ano</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="data">
+          <DataField>data</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>GastosLeoDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Natalia\source\repos\SistemaGastos\SistemaGastos\GastosLeoDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>lancamento</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>lancamentoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet3">
       <Query>
         <DataSourceName>GastosLeoDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
